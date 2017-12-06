@@ -31,9 +31,9 @@ Example  <br>
 
 <br><br>**YOLO format label look like this** <br>
 class_id    obj_centroid_x/img_w  obj_centroid_y/img_h  obj_width    obj_height  <br>
-0 0.915625 0.31640625 0.1 0.1796875 <br>
-0 0.721875 0.4390625 0.275 0.134375 <br>
-0 0.709375 0.30703125 0.171875 0.1234375 <br>
+0    0.915625    0.31640625 0.1 0.1796875 <br>
+0    0.721875     0.4390625 0.275 0.134375 <br>
+0    0.709375 0.30703125 0.171875 0.1234375 <br>
 
 
 <br><br>**bbox to YOLO converter** <br>
