@@ -7,36 +7,33 @@ SSD could read voc txt label.
 
 
 <br><br>**Bounding box look like this** <br>
-object number
-xmin ymin xmax ymax
-xmin ymin xmax ymax
+object number  <br>
+xmin ymin xmax ymax  <br>
+xmin ymin xmax ymax  <br>
 ....
- 
-
-
 
 Example 
-2
-10 75 44 111
-18 151 48 186
+2 <br>
+10 75 44 111 <br>
+18 151 48 186 <br>
 
 
 
 <br><br>**VOC format label look like this** <br>
 class_id  xmin, ymin, xmax, ymax
 
-Example 
-0 10 75 44 111  
-0 18 151 48 186
+Example  <br>
+0 10 75 44 111   <br>
+0 18 151 48 186 <br>
 
 
 
 
 <br><br>**YOLO format label look like this** <br>
-class_id    obj_centroid_x/img_w  obj_centroid_y/img_h  obj_width    obj_height
-0 0.915625 0.31640625 0.1 0.1796875
-0 0.721875 0.4390625 0.275 0.134375
-0 0.709375 0.30703125 0.171875 0.1234375
+class_id    obj_centroid_x/img_w  obj_centroid_y/img_h  obj_width    obj_height  <br>
+0 0.915625 0.31640625 0.1 0.1796875 <br>
+0 0.721875 0.4390625 0.275 0.134375 <br>
+0 0.709375 0.30703125 0.171875 0.1234375 <br>
 
 
 <br><br>**bbox to YOLO converter** <br>
