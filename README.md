@@ -8,8 +8,12 @@ SSD could read voc txt label.
 
 <br><br>**Bounding box look like this** <br>
 object number
-xmin, xmax, ymin, ymax
-xmin, xmax, ymin, ymax
+xmin ymin xmax ymax
+xmin ymin xmax ymax
+....
+ 
+
+
 
 Example 
 2
@@ -19,7 +23,7 @@ Example
 
 
 <br><br>**VOC format label look like this** <br>
-class_id  xmin, xmax, ymin, ymax,  xmin, xmax, ymin, ymax
+class_id  xmin, ymin, xmax, ymax
 
 Example 
 0 10 75 44 111  
