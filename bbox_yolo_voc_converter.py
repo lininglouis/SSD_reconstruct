@@ -2,6 +2,7 @@ import myBasics as mb
 import shutil    
 import cv2    
 import os  
+import numpy as np
 
 '''
 bbox:  xmin, ymin, xmax, ymax
@@ -36,8 +37,7 @@ def yolo2bbox(imageShape, yoloBox):
     y = y*img_h
     h = h*img_h
     bbox = [ int(x-w/2), int(x+w/2), int(y-h/2), int(y+h/2) ]
-    return bbox        
-        
+    return bbox             
 
 def fetch_images_bboxLabels_from_trainList(togo_img_dir, togo_label_bbox_dir, trainListTxt, whole_bbox_label_dir):    
     
@@ -48,7 +48,6 @@ def fetch_images_bboxLabels_from_trainList(togo_img_dir, togo_label_bbox_dir, tr
             label_path = os.path.join(whole_bbox_label_dir, img_name.replace('JPEG','txt'))        
             shutil.copy(img_path, togo_img_dir)
             shutil.copy(label_path, togo_label_bbox_dir)       
-
 
 def bbox2yolo_converter(imageShape, bbox):  # xmin, ymin, xmax, ymax
     dw = 1./imageShape[0]
@@ -63,14 +62,8 @@ def bbox2yolo_converter(imageShape, bbox):  # xmin, ymin, xmax, ymax
     w = w*dw
     h = h*dh
     return (x,y,w,h)  #centroid x,y.   object w,h
-
- 
-    
-    
-    
     
 def bbox2yolo(bbox_label_path, YOLO_label_path, image_path, class_index):
- 
     img_shape = cv2.imread(image_path).shape[:2]
     with open(bbox_label_path, 'rb') as f_bbox_label:
         num_text = f_bbox_label.readline()
@@ -93,10 +86,7 @@ def bbox2yolo(bbox_label_path, YOLO_label_path, image_path, class_index):
                     f_YOLO_label.write('{}'.format(class_index)+ yolo_box_str + '\n')
         else:
             print ('the bounding box label file is empty')
-       
- 
-
-            
+      
 def bbox2voc(bboxLabelPath, ssdLabelPath, class_index):
     with open(bbox_label_path, 'rb') as f_bbox_label:
         num_text = f_bbox_label.readline()
@@ -114,16 +104,8 @@ def bbox2voc(bboxLabelPath, ssdLabelPath, class_index):
         else:
             print ('the bounding box label file is empty')
 
+ 
 
-
-
-
-
-        
-        
-        
-
-import numpy as np
 
 # your trainlist txt.  contain the paths for each image
 yoloTrainListTxt = './Colony_trainlist_0.125.txt'
