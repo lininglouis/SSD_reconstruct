@@ -62,7 +62,7 @@ images_relative_dir = os.path.join(dataset, 'Images')
 labels_relative_dir = os.path.join(dataset, 'Labels')
 
 current_dir= os.getcwd()
-print "current_dir:",  current_dir
+print ("current_dir:",  current_dir)
 dst_all_tmp= os.path.join(current_dir, "all_tmp.txt")
 dst_file_trainval= os.path.join(current_dir, "trainval.txt")
 dst_file_test= os.path.join(current_dir, "test.txt")
@@ -79,7 +79,7 @@ label_list = listdir_fullpath(labelDir)
 images_list.sort()
 label_list.sort()
 images_labels_pairs = zip(images_list, label_list)
-print images_list[0], label_list[0]
+print (images_list[0], label_list[0])
 images_labels_pairs_shuffled = getShuffleList(images_labels_pairs)
 trainval_pairs, test_pairs = splitList(images_labels_pairs_shuffled, trainRatio=0.8)
 
