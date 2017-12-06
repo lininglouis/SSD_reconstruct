@@ -1,4 +1,4 @@
-# SSD_reconstruct
+# SSD_reconstruct <br>
 
 This repository do two things.
 1. change create_data.sh and create_list.sh two shell scripts in SSD to python version.
@@ -6,7 +6,7 @@ This repository do two things.
 SSD could read voc txt label.
 
 
-**Bounding box look like this**
+**Bounding box look like this** <br>
 object number
 xmin, xmax, ymin, ymax
 xmin, xmax, ymin, ymax
@@ -18,7 +18,7 @@ Example
 
 
 
-**VOC format label look like this**
+**VOC format label look like this** <br>
 class_id  xmin, xmax, ymin, ymax,  xmin, xmax, ymin, ymax
 
 Example 
@@ -28,7 +28,7 @@ Example
 
 
 
-**YOLO format label look like this**
+**YOLO format label look like this** <br>
 class_id    obj_centroid_x/img_w  obj_centroid_y/img_h  obj_width    obj_height
 0 0.915625 0.31640625 0.1 0.1796875
 0 0.721875 0.4390625 0.275 0.134375
