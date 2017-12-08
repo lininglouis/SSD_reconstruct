@@ -39,10 +39,10 @@ class_id    obj_centroid_x/img_w  obj_centroid_y/img_h  obj_width    obj_height 
 <br><br>**bbox to YOLO converter** <br>
 since bbox and voc are very similar, the core calculation of the conversion is from bbox to yolo
 ```python
-def bbox2yolo_converter(imageShape, bbox):  #xmin, xmax, ymin, ymax
+def bbox2yolo_converter(imageShape, bbox):  # xmin, ymin, xmax, ymax
     dw = 1./imageShape[0]
     dh = 1./imageShape[1]
-    xmin, xmax, ymin, ymax = bbox
+    xmin, ymin, xmax, ymax = bbox
     centroid_x = (xmin + xmax)/2.0
     centroid_y = (ymin + ymax)/2.0
     w = xmax - xmin
@@ -52,6 +52,7 @@ def bbox2yolo_converter(imageShape, bbox):  #xmin, xmax, ymin, ymax
     w = w*dw
     h = h*dh
     return (x,y,w,h)  #centroid x,y.   object w,h
+
 ```
 
 

@@ -41,7 +41,7 @@ def yolo2bbox(imageShape, yoloBox):
 
 def fetch_images_bboxLabels_from_trainList(togo_img_dir, togo_label_bbox_dir, trainListTxt, whole_bbox_label_dir):    
     
-    with open(trainListTxt, 'r') as f:
+    with open(trainListTxt, 'rb') as f:
         for img_path in f:
             img_path = img_path.strip()
             img_name = os.path.basename(img_path.strip())
@@ -72,12 +72,12 @@ def bbox2yolo_converter(imageShape, bbox):  # xmin, ymin, xmax, ymax
 def bbox2yolo(bbox_label_path, YOLO_label_path, image_path, class_index):
  
     img_shape = cv2.imread(image_path).shape[:2]
-    with open(bbox_label_path, 'r') as f_bbox_label:
+    with open(bbox_label_path, 'rb') as f_bbox_label:
         num_text = f_bbox_label.readline()
         #print bbox_label_path
         if num_text:
             boxNum = int(num_text.strip())
-            with open(YOLO_label_path, 'w') as f_YOLO_label:
+            with open(YOLO_label_path, 'wb') as f_YOLO_label:
                 for i in range(boxNum):
                     lineContent = f_bbox_label.readline().strip()
                     bbox = [int(i) for i in lineContent.split(' ')]
@@ -98,11 +98,11 @@ def bbox2yolo(bbox_label_path, YOLO_label_path, image_path, class_index):
 
             
 def bbox2voc(bboxLabelPath, ssdLabelPath, class_index):
-    with open(bbox_label_path, 'r') as f_bbox_label:
+    with open(bbox_label_path, 'rb') as f_bbox_label:
         num_text = f_bbox_label.readline()
         if num_text:
             boxNum = int(num_text.strip())
-            with open(ssd_label_path, 'w') as f_ssd_label:
+            with open(ssd_label_path, 'wb') as f_ssd_label:
                 for i in range(boxNum):
                     lineContent = f_bbox_label.readline().strip()
                     bbox = [int(i) for i in lineContent.split(' ')]
@@ -125,23 +125,18 @@ def bbox2voc(bboxLabelPath, ssdLabelPath, class_index):
 
 import numpy as np
 
-
-# you need provide yoloTrainList.txt file and  the label folder
-
 # your trainlist txt.  contain the paths for each image
-yoloTrainListTxt = r'H:\ColonyOutput2_0911_MergeOne-Copy_SPLIT\v1_v2_labelled\forSSD\trainList_0.125.txt'
+yoloTrainListTxt = './Colony_trainlist_0.125.txt'
+
 # the file containing the bounding box label using this tool https://github.com/puzzledqs/BBox-Label-Tool
 whole_bbox_label_dir = r'H:\ColonyOutput2_0911_MergeOne-Copy_SPLIT\v1_v2_labelled\labels_bbox'
 
+ 
 
-
-
-# it will generate folders for
-parentFolder = r'H:\ColonyOutput2_0911_MergeOne-Copy_SPLIT\v1_v2_labelled\forSSD\0.125_test'
-togo_img_dir =  os.path.join(parentFolder, 'Images_0.125')
-togo_label_bbox_dir = os.path.join(parentFolder, 'Labels_bbox_0.125_NEW')
-togo_label_SSD_dir =  os.path.join(parentFolder, 'Labels_SSD_0.125_NEW')
-togo_label_YOLO_dir = os.path.join(parentFolder, 'Labels_YOLO_0.125_NEW')
+togo_img_dir =  r'....\Images_0.125'
+togo_label_bbox_dir =  r'....\Labels_bbox_0.125_NEW'
+togo_label_SSD_dir =  r'....\Labels_SSD_0.125_NEW'
+togo_label_YOLO_dir =  r'....\Labels_YOLO_0.125_NEW'
 
 mb.mkdir_if_not_exist(togo_img_dir)
 mb.mkdir_if_not_exist(togo_label_bbox_dir)
