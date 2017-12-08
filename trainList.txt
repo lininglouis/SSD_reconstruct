@@ -37,7 +37,7 @@ H:/ColonyOutput2_0911_MergeOne-Copy_SPLIT/v1_v2_labelled/Images/regID17374_regio
 H:/ColonyOutput2_0911_MergeOne-Copy_SPLIT/v1_v2_labelled/Images/regID13256_region1_neibor-100.557890299_48.8785375133.JPEG
 H:/ColonyOutput2_0911_MergeOne-Copy_SPLIT/v1_v2_labelled/Images/regID8000_region1_neibor-101.333587805_47.380210522.JPEG
 H:/ColonyOutput2_0911_MergeOne-Copy_SPLIT/v1_v2_labelled/Images/regID2766_region1_neibor-100.109444443_48.8208239304.JPEG
-H:/ColonyOutput2_0911_MergeOne-Copy_SPLIT/v1_v2_labelled/Images/regID6159_region1_neibor-99.3832161455_46.8867120996.JPEG
+H:/ColonyOutput2_0911_MergeOne-Copy_SPLIT/v1_v2_labelled/Images/regID6159_region1_neibor-99.3832161455_46.8867120996.JPEG 
 H:/ColonyOutput2_0911_MergeOne-Copy_SPLIT/v1_v2_labelled/Images/regID8024_region1_neibor-100.839110007_47.3708527295.JPEG
 H:/ColonyOutput2_0911_MergeOne-Copy_SPLIT/v1_v2_labelled/Images/regID5489_region1_neibor-99.869270948_46.7311322563.JPEG
 H:/ColonyOutput2_0911_MergeOne-Copy_SPLIT/v1_v2_labelled/Images/regID8860_region1_neibor-101.015207378_47.695665769.JPEG
